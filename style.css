@@ -1,0 +1,156 @@
+.contenedor {
+    display: grid;
+    margin: 0;
+    width: 90%;
+    height: 100vh;
+    margin-left: 77px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 200px;
+    grid-template-areas: "vacio vacio"
+                         "espanta titulin"
+                         "espanta texto"
+                         "espanta boton"
+                         "footer footer";
+}
+
+.titulo {
+    margin-top: 40px;
+    margin-left: 77px;
+    font-family: Inconsolata;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 25px;
+    letter-spacing: -0.08em;
+    text-transform: uppercase;
+    color: #333333;
+}
+
+.contenedor .imagen{
+    grid-area: espanta;
+    margin-right: 50px;
+}
+
+.contenedor .imagen img{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    object-fit: fill;
+    object-position: center;
+}
+
+.contenedor .titulin{
+    grid-area: titulin;
+    margin: 0;
+    padding: 0;
+    margin-left: 50px;
+    font-family: Space Mono;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 64px;
+    line-height: 95px;
+    letter-spacing: -0.035em;
+    color: #333333;
+}
+
+.contenedor .texto {
+    grid-area: texto;
+    margin: 0;
+    margin: 50px;
+    width: 60%;
+    padding: 0;
+    font-family: Space Mono;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 36px;
+    letter-spacing: -0.035em;
+    color: #4F4F4F;
+}
+
+.contenedor .boton {
+    grid-area: boton;
+    background: #333333;
+    margin: 0;
+    margin-left: 50px;
+    align-self: center;
+    width: 40%;
+    height: 33%;
+    font-family: Space Mono;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: -0.035em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+.contenedor .footer {
+    grid-area: footer;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 24px;
+    align-self: end;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    color: #BDBDBD;
+
+}
+
+@media (max-width: 376px) {
+
+    .contenedor {
+        grid-template-columns: 1fr;
+        width: 100%;
+        margin-top: 50px;
+        margin-left: 20px;
+        margin-right: 20px;
+        grid-auto-rows: 220px;
+        grid-template-areas: "espanta"
+                             "titulin"
+                             "texto"
+                             "boton"
+                             "footer";
+    }
+
+    .titulo {
+    margin-top: 20px;
+    margin-left: 24px;
+    }
+
+    .contenedor .titulin{
+        margin: 0;
+        margin-top: 70px;
+        padding: 0px;
+        font-size: 48px;
+        line-height: 71px;
+    }
+
+    .contenedor .espanta {
+        margin-left: 24px;
+        margin-right: 24px;
+    }
+
+    .contenedor .texto {
+        font-size: 18px;
+        line-height: 27px;
+        margin: 0;
+        margin-top: 30px;
+        width: 90%;
+    }
+
+    .contenedor .boton {
+        width: 60%;
+        margin: 0;
+        align-self: start;
+    }
+
+    .contenedor .footer{
+        margin-bottom: 170px;
+    }
+}
